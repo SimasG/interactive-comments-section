@@ -1,0 +1,60 @@
+main {
+  .comment-container {
+    background: $white;
+    padding: 1.6rem;
+    border-radius: 8px;
+    margin-bottom: 1.6rem;
+    .comment-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      margin-bottom: 2rem;
+      .img-user {
+        height: 3.2rem;
+        width: 3.2rem;
+      }
+      .user-name {
+        font-weight: 500;
+        color: $dark-blue;
+      }
+      .comment-date {
+        color: $grayish-blue;
+      }
+    }
+    div .comment {
+      color: $grayish-blue;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+    .vote-reply-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .vote-btn-container {
+        background: $very-light-gray;
+        width: 10rem;
+        height: 4rem;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1.2rem;
+        .score {
+          color: $moderate-blue;
+          font-weight: 500;
+        }
+      }
+    }
+    .btn-reply-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.9rem;
+      .btn-reply {
+        color: $moderate-blue;
+        font-weight: 500;
+      }
+    }
+  }
+}
