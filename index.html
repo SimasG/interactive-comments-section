@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive comments section</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  <!-- Pull dynamic content from the data.json file -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <title>Interactive comments section</title>
+  </head>
+  <body>
+    <main>
+      <section class="comment-container 1">
+        <div class="comment-info">
+          <img class="img-user" src="" alt="" />
+          <p class="user-name"></p>
+          <p class="comment-date"></p>
+        </div>
+        <div class="comment"></div>
+        <div class="upvote-reply-container">
+          <div>
+            <button class="btn btn-upvote">
+              <a class="icon-plus" href=""></a>
+            </button>
+            <p class="score"></p>
+            <button class="btn btn-downvote">
+              <a class="icon-minus" href=""></a>
+            </button>
+          </div>
+          <div>
+            <a class="icon-reply" href=""></a>
+            <button class="btn-reply"></button>
+          </div>
+        </div>
+      </section>
+      <section class="comment-container 2">
+        <section class="comment-reply-container"></section>
+      </section>
+      <section class="current-user-container">
+        <input class="current-user-comment" type="text" />
+        <div>
+          <img class="img-current-user" src="" alt="" />
+          <button class="btn btn-submit-comment"></button>
+        </div>
+      </section>
+    </main>
+    <section class="delete-modal"></section>
+  </body>
 </html>
