@@ -17,6 +17,7 @@ async function displayData() {
 
   const main = document.querySelector("main");
 
+  //   populating the comments
   for (let comment of data.comments) {
     const commentHtml = `<section class="container comment-container">
         <div class="comment-info">
@@ -67,6 +68,7 @@ async function displayData() {
     main.insertAdjacentHTML("beforeend", commentHtml);
   }
 
+  //   populating the commment replies
   for (let i = 0; i < data.comments.length; i++) {
     if (data.comments[i].replies.length > 0) {
       commentReplies = data.comments[i].replies;
@@ -129,4 +131,22 @@ async function displayData() {
       });
     }
   }
+
+  //   populating the current user comment container
+  const currentUserHtml = `<section class="current-user-container">
+    <input
+      class="current-user-comment"
+      type="text"
+      placeholder="Add a comment..."
+    />
+    <div class="submit-comment-container">
+      <img
+        class="img-current-user"
+        src=${data.currentUser.image.png}
+        alt=""
+      />
+      <button class="btn btn-submit-comment">SEND</button>
+    </div>
+  </section>`;
+  main.insertAdjacentHTML("beforeend", currentUserHtml);
 }
