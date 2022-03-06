@@ -1,5 +1,5 @@
 main {
-  .comment-container {
+  .container {
     background: $white;
     padding: 1.6rem;
     border-radius: 8px;
@@ -56,14 +56,18 @@ main {
         }
       }
     }
-    .comment-reply-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .left-line {
-        background: $light-gray;
-        width: 0.2rem;
-      }
+  }
+  .comment-reply-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    .left-line {
+      background: $light-gray;
+      width: 0.2rem;
+      height: 20rem;
+    }
+    .comment-reply-subcontainer {
+      width: 95%;
     }
   }
 }

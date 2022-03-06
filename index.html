@@ -23,8 +23,7 @@
   </head>
   <body>
     <main>
-      <!-- comment 1 -->
-      <section class="comment-container 1">
+      <!-- <section class="container comment-container 1">
         <div class="comment-info">
           <img class="img-user" data-element="img" alt="" />
           <p class="user-name"></p>
@@ -69,9 +68,8 @@
             <button class="btn-reply">Reply</button>
           </div>
         </div>
-      </section>
-      <!-- comment 2 -->
-      <section class="comment-container 2">
+      </section> -->
+      <!-- <section class="container comment-container 2">
         <div class="comment-info">
           <img class="img-user" data-element="img" src="" alt="" />
           <p class="user-name"></p>
@@ -116,22 +114,26 @@
             <button class="btn-reply">Reply</button>
           </div>
         </div>
-      </section>
-      <!-- comment reply container -->
+      </section> -->
       <section class="comment-reply-container">
         <div class="left-line"></div>
-        <div class="comment-reply-subcontainer">
+        <div class="container comment-reply-subcontainer">
           <!-- copied from above -->
-          <div class="comment-info">
-            <img class="img-user" data-element="img" src="" alt="" />
-            <p class="user-name"></p>
-            <p class="comment-date"></p>
+          <div class="comment-info comment-info-reply">
+            <img
+              class="img-user img-user-reply"
+              data-element="img"
+              src=""
+              alt=""
+            />
+            <p class="user-name user-name-reply"></p>
+            <p class="comment-date comment-date-reply"></p>
           </div>
           <div>
-            <p class="comment"></p>
+            <p class="comment comment-reply"></p>
           </div>
-          <div class="vote-reply-container">
-            <div class="vote-btn-container">
+          <div class="vote-reply-container vote-reply-container-reply">
+            <div class="vote-btn-container vote-btn-container-reply">
               <svg
                 class="icon-plus"
                 width="11"
@@ -143,7 +145,7 @@
                   fill="#C5C6EF"
                 />
               </svg>
-              <p class="score">12</p>
+              <p class="score score-reply">12</p>
               <svg
                 class="icon-minus"
                 width="11"
@@ -156,19 +158,18 @@
                 />
               </svg>
             </div>
-            <div class="btn-reply-container">
+            <div class="btn-reply-container btn-reply-container-reply">
               <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M.227 4.316 5.04.16a.657.657 0 0 1 1.085.497v2.189c4.392.05 7.875.93 7.875 5.093 0 1.68-1.082 3.344-2.279 4.214-.373.272-.905-.07-.767-.51 1.24-3.964-.588-5.017-4.829-5.078v2.404c0 .566-.664.86-1.085.496L.227 5.31a.657.657 0 0 1 0-.993Z"
                   fill="#5357B6"
                 />
               </svg>
-              <button class="btn-reply">Reply</button>
+              <button class="btn-reply btn-reply-reply">Reply</button>
             </div>
           </div>
         </div>
       </section>
-      <!-- current user container -->
       <section class="current-user-container">
         <input class="current-user-comment" type="text" />
         <div>

@@ -127,14 +127,14 @@ input::-webkit-inner-spin-button {
   display: none;
 }
 
-main .comment-container {
+main .container {
   background: #fff;
   padding: 1.6rem;
   border-radius: 8px;
   margin-bottom: 1.6rem;
 }
 
-main .comment-container .comment-info {
+main .container .comment-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,27 +148,27 @@ main .comment-container .comment-info {
   margin-bottom: 2rem;
 }
 
-main .comment-container .comment-info .img-user {
+main .container .comment-info .img-user {
   height: 3.2rem;
   width: 3.2rem;
 }
 
-main .comment-container .comment-info .user-name {
+main .container .comment-info .user-name {
   font-weight: 500;
   color: #334253;
 }
 
-main .comment-container .comment-info .comment-date {
+main .container .comment-info .comment-date {
   color: #67727e;
 }
 
-main .comment-container div .comment {
+main .container div .comment {
   color: #67727e;
   line-height: 1.5;
   margin-bottom: 2rem;
 }
 
-main .comment-container .vote-reply-container {
+main .container .vote-reply-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,7 +180,7 @@ main .comment-container .vote-reply-container {
           align-items: center;
 }
 
-main .comment-container .vote-reply-container .vote-btn-container {
+main .container .vote-reply-container .vote-btn-container {
   background: #f5f6fa;
   width: 10rem;
   height: 4rem;
@@ -197,12 +197,12 @@ main .comment-container .vote-reply-container .vote-btn-container {
   padding: 0 1.2rem;
 }
 
-main .comment-container .vote-reply-container .vote-btn-container .score {
+main .container .vote-reply-container .vote-btn-container .score {
   color: #5357b6;
   font-weight: 500;
 }
 
-main .comment-container .vote-reply-container .btn-reply-container {
+main .container .vote-reply-container .btn-reply-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,25 +215,30 @@ main .comment-container .vote-reply-container .btn-reply-container {
   gap: 0.9rem;
 }
 
-main .comment-container .vote-reply-container .btn-reply-container .btn-reply {
+main .container .vote-reply-container .btn-reply-container .btn-reply {
   color: #5357b6;
   font-weight: 500;
 }
 
-main .comment-container .comment-reply-container {
+main .comment-reply-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
-main .comment-container .comment-reply-container .left-line {
+main .comment-reply-container .left-line {
   background: #e9ebf0;
   width: 0.2rem;
+  height: 20rem;
+}
+
+main .comment-reply-container .comment-reply-subcontainer {
+  width: 95%;
 }
 /*# sourceMappingURL=styles.css.map */
