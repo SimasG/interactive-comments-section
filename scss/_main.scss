@@ -45,15 +45,24 @@ main {
           font-weight: 500;
         }
       }
+      .btn-reply-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.9rem;
+        .btn-reply {
+          color: $moderate-blue;
+          font-weight: 500;
+        }
+      }
     }
-    .btn-reply-container {
+    .comment-reply-container {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      gap: 0.9rem;
-      .btn-reply {
-        color: $moderate-blue;
-        font-weight: 500;
+      .left-line {
+        background: $light-gray;
+        width: 0.2rem;
       }
     }
   }

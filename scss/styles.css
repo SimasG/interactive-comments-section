@@ -202,7 +202,7 @@ main .comment-container .vote-reply-container .vote-btn-container .score {
   font-weight: 500;
 }
 
-main .comment-container .btn-reply-container {
+main .comment-container .vote-reply-container .btn-reply-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,8 +215,25 @@ main .comment-container .btn-reply-container {
   gap: 0.9rem;
 }
 
-main .comment-container .btn-reply-container .btn-reply {
+main .comment-container .vote-reply-container .btn-reply-container .btn-reply {
   color: #5357b6;
   font-weight: 500;
+}
+
+main .comment-container .comment-reply-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .comment-container .comment-reply-container .left-line {
+  background: #e9ebf0;
+  width: 0.2rem;
 }
 /*# sourceMappingURL=styles.css.map */
