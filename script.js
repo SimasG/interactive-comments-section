@@ -145,6 +145,32 @@ btnSubmit.addEventListener("click", async function () {
   createComment();
 });
 
+function formatDaysAgo(value, locale) {
+  const date = new Date(value);
+  let deltaDays = (date.getTime() - Date.now()) / (1000 * 3600 * 24);
+  const deltaDaysPrecise = Math.round(deltaDays);
+  if (deltaDaysPrecise > -7) {
+    const formatter = new Intl.RelativeTimeFormat(locale);
+    return formatter.format(Math.round(deltaDays), "days");
+  } else if (deltaDaysPrecise < -7 && deltaDaysPrecise > -31) {
+    deltaDays = (date.getTime() - Date.now()) / (1000 * 3600 * 24 * 7);
+    const formatter = new Intl.RelativeTimeFormat(locale);
+    return formatter.format(Math.round(deltaDays), "weeks");
+  } else if (deltaDaysPrecise < -31) {
+    deltaDays = (date.getTime() - Date.now()) / (1000 * 3600 * 24 * 30.42);
+    const formatter = new Intl.RelativeTimeFormat(locale);
+    return formatter.format(Math.round(deltaDays), "months");
+  }
+}
+
+// function formatWeeksAgo(value, locale) {
+//     if (formatDaysAgo(value) > )
+// }
+
+console.log(formatDaysAgo("2022-01-09"));
+
+// console.log(formatDaysAgo(new Date(1646656123078)));
+
 function addComment(comment) {
   const commentHtml2 = `<section class="container comment-container">
     <div class="comment-info">
