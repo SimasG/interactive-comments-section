@@ -258,6 +258,15 @@ main .comment-reply-container .container.comment-reply-subcontainer {
   width: 95%;
 }
 
+main .user-replies {
+  border-radius: 8px;
+  width: 100%;
+}
+
+main .user-replies .container {
+  margin-bottom: 1.6rem;
+}
+
 main .current-user-container {
   background: #fff;
   width: 100%;

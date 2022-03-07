@@ -75,6 +75,13 @@ main {
       width: 95%;
     }
   }
+  .user-replies {
+    border-radius: 8px;
+    width: 100%;
+    .container {
+      margin-bottom: 1.6rem;
+    }
+  }
   .current-user-container {
     background: $white;
     width: 100%;
