@@ -71,7 +71,7 @@ async function displayData() {
     userReplies.insertAdjacentHTML("beforeend", commentHtml);
   }
 
-  // TODO: Add only one event listener for each btn that can be fired many times
+  // TODO: Add only one event listener for each btn that can be fired many times (conditionally) -> DONE
   // TODO Event handler -> adding one comment reply template literal under the comment
 
   //   populating the comments
@@ -79,11 +79,38 @@ async function displayData() {
     loadComments(comment);
   }
 
-  let btnReplyContainer = document.querySelectorAll(".btn-reply-container");
+  //   adding reply functionality
+  const btnReplyContainer = document.querySelectorAll(".btn-reply-container");
   btnReplyContainer.forEach((btn) => {
     btn.addEventListener(
       "click",
       () => {
+        const commentReplySection = document.createElement("section");
+        main.appendChild(commentReplySection);
+        // commentReplySection.classList.add("current-user-container");
+        const commentReplySectionHtml = `<section class="current-user-container">
+        <textarea
+          name=""
+          id=""
+          cols="36"
+          rows="10"
+          placeholder="Add a comment..."
+        ></textarea>
+        <!-- <input
+          class="current-user-comment"
+          type="text"
+          placeholder="Add a comment..."
+        /> -->
+        <div class="submit-comment-container">
+          <img class="img-current-user" alt="" />
+          <button class="btn btn-submit-comment">SEND</button>
+        </div>
+      </section>`;
+        commentReplySection.insertAdjacentHTML(
+          "beforeend",
+          commentReplySectionHtml
+        );
+
         console.log("heyooo");
       },
       { once: true }
@@ -155,7 +182,11 @@ async function displayData() {
   }
 
   //   populating the current user comment container
-  document.querySelector(".img-current-user").src = data.currentUser.image.png;
+  document.querySelectorAll(".img-current-user").forEach((img) => {
+    img.src = data.currentUser.image.png;
+  });
+  //   document.querySelector(".img-current-user").src =
+  //     data.currentUser.image.png;
 }
 
 const btnSubmit = document.querySelector(".btn-submit-comment");
