@@ -3,12 +3,12 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.6rem;
+  //   gap: 1.6rem;
   .container {
     background: $white;
     padding: 1.6rem;
     border-radius: 8px;
-    // margin-bottom: 1.6rem;
+    margin-bottom: 1.6rem;
     width: 100%;
     .comment-info {
       display: flex;
@@ -86,7 +86,14 @@ main {
       width: 95%;
     }
   }
-  .user-replies {
+  //   .user-replies {
+  //     border-radius: 8px;
+  //     width: 100%;
+  //     .container {
+  //       margin-bottom: 1.6rem;
+  //     }
+  //   }
+  .replies {
     border-radius: 8px;
     width: 100%;
     .container {
@@ -98,6 +105,7 @@ main {
     width: 100%;
     padding: 1.6rem;
     border-radius: 8px;
+    margin-bottom: 1.6rem;
     // input[type="text"] {
     //   border: 1px $light-gray solid;
     //   border-radius: 8px;
@@ -216,4 +224,62 @@ main {
   //   width: 95%;
   // }
   //   }
+}
+
+.modal-delete {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  //   background: black;
+  justify-content: center;
+  align-items: center;
+  .modal-delete-subcontainer {
+    background: $white;
+    padding: 2.4rem;
+    margin: 0 1.6rem;
+    border-radius: 8px;
+    .modal-heading {
+      color: $dark-blue;
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 2.6rem;
+    }
+    .modal-paragraph {
+      color: $grayish-blue;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      margin-bottom: 2.3rem;
+    }
+    .modal-delete-btns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .modal-btn {
+        height: 4.8rem;
+        width: 13.8rem;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        border-radius: 8px;
+        color: white;
+        font-weight: 500;
+      }
+      .modal-btn:hover {
+        opacity: 0.5;
+        transition: opacity 0.3s;
+      }
+      .modal-btn-cancel {
+        background: $grayish-blue;
+      }
+      .modal-btn-delete {
+        background: $soft-red;
+      }
+    }
+  }
+}
+.modal-delete.show {
+  display: flex;
 }

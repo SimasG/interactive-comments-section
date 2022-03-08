@@ -141,13 +141,13 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.6rem;
 }
 
 main .container {
   background: #fff;
   padding: 1.6rem;
   border-radius: 8px;
+  margin-bottom: 1.6rem;
   width: 100%;
 }
 
@@ -269,12 +269,12 @@ main .comment-reply-container .container.comment-reply-subcontainer {
   width: 95%;
 }
 
-main .user-replies {
+main .replies {
   border-radius: 8px;
   width: 100%;
 }
 
-main .user-replies .container {
+main .replies .container {
   margin-bottom: 1.6rem;
 }
 
@@ -283,6 +283,7 @@ main .current-user-container {
   width: 100%;
   padding: 1.6rem;
   border-radius: 8px;
+  margin-bottom: 1.6rem;
 }
 
 main .current-user-container textarea {
@@ -385,5 +386,84 @@ main .user-replies .user-comment-reply-container .current-user-container textare
 main .user-replies .user-comment-reply-container .current-user-container textarea:active,
 main .user-replies .user-comment-reply-container .current-user-container textarea:focus {
   outline: 1px #5357b6 solid;
+}
+
+.modal-delete {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-delete .modal-delete-subcontainer {
+  background: #fff;
+  padding: 2.4rem;
+  margin: 0 1.6rem;
+  border-radius: 8px;
+}
+
+.modal-delete .modal-delete-subcontainer .modal-heading {
+  color: #334253;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2.6rem;
+}
+
+.modal-delete .modal-delete-subcontainer .modal-paragraph {
+  color: #67727e;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 2.3rem;
+}
+
+.modal-delete .modal-delete-subcontainer .modal-delete-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-delete .modal-delete-subcontainer .modal-delete-btns .modal-btn {
+  height: 4.8rem;
+  width: 13.8rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+}
+
+.modal-delete .modal-delete-subcontainer .modal-delete-btns .modal-btn:hover {
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.modal-delete .modal-delete-subcontainer .modal-delete-btns .modal-btn-cancel {
+  background: #67727e;
+}
+
+.modal-delete .modal-delete-subcontainer .modal-delete-btns .modal-btn-delete {
+  background: #ed6368;
+}
+
+.modal-delete.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=styles.css.map */
