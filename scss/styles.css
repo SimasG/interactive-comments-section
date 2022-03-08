@@ -214,9 +214,17 @@ main .container .vote-reply-container .vote-btn-container {
   padding: 0 1.2rem;
 }
 
+main .container .vote-reply-container .vote-btn-container .icon-plus {
+  cursor: pointer;
+}
+
 main .container .vote-reply-container .vote-btn-container .score {
   color: #5357b6;
   font-weight: 500;
+}
+
+main .container .vote-reply-container .vote-btn-container .icon-minus {
+  cursor: pointer;
 }
 
 main .container .vote-reply-container .btn-reply-container {
@@ -230,11 +238,18 @@ main .container .vote-reply-container .btn-reply-container {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.9rem;
+  cursor: pointer;
 }
 
 main .container .vote-reply-container .btn-reply-container .btn-reply {
   color: #5357b6;
   font-weight: 500;
+}
+
+main .container .vote-reply-container .btn-reply-container:hover {
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 main .comment-reply-container {
@@ -274,21 +289,27 @@ main .current-user-container {
   border-radius: 8px;
 }
 
-main .current-user-container input[type="text"] {
+main .current-user-container textarea {
   border: 1px #e9ebf0 solid;
   border-radius: 8px;
   width: 100%;
   height: 9.6rem;
-  margin-bottom: 1.6rem;
-  padding-bottom: 4.5rem;
-}
-
-main .current-user-container input[type="text"]::-webkit-input-placeholder {
-  color: red;
+  padding-left: 2.3rem;
+  padding-top: 1.6rem;
+  color: #67727e;
   line-height: 2.4rem;
   font-size: 1.6rem;
-  color: #67727e;
-  padding-left: 2.3rem;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+  margin-bottom: 1.6rem;
+  resize: none;
+  outline: none;
+  caret-color: #5357b6;
+}
+
+main .current-user-container textarea:active,
+main .current-user-container textarea:focus {
+  outline: 1px #5357b6 solid;
 }
 
 main .current-user-container .submit-comment-container {
@@ -315,5 +336,11 @@ main .current-user-container .submit-comment-container .btn-submit-comment {
   border-radius: 8px;
   color: #fff;
   font-weight: 500;
+}
+
+main .current-user-container .submit-comment-container .btn-submit-comment:hover {
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 /*# sourceMappingURL=styles.css.map */

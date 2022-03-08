@@ -14,6 +14,10 @@ async function getData() {
   return await response.json();
 }
 
+// const handleClick = () => {
+//   console.log("blet");
+// };
+
 async function displayData() {
   const data = await getData();
 
@@ -63,14 +67,28 @@ async function displayData() {
         <button class="btn-reply">Reply</button>
       </div>
     </div>
-  </section>`;
+    </section>`;
     userReplies.insertAdjacentHTML("beforeend", commentHtml);
   }
+
+  // TODO: Add only one event listener for each btn that can be fired many times
+  // TODO Event handler -> adding one comment reply template literal under the comment
 
   //   populating the comments
   for (let comment of data.comments) {
     loadComments(comment);
   }
+
+  let btnReplyContainer = document.querySelectorAll(".btn-reply-container");
+  btnReplyContainer.forEach((btn) => {
+    btn.addEventListener(
+      "click",
+      () => {
+        console.log("heyooo");
+      },
+      { once: true }
+    );
+  });
 
   //   populating the commment replies
   for (let i = 0; i < data.comments.length; i++) {
@@ -157,7 +175,7 @@ function formatDaysAgo(value, locale) {
       formatter.format(Math.round(deltaDays), "days") === "0 days ago"
     ) {
       let finalFormatter = formatter.format(Math.round(deltaDays), "days");
-      finalFormatter = "now";
+      finalFormatter = "seconds ago";
       return finalFormatter;
     }
     return formatter.format(Math.round(deltaDays), "days");
